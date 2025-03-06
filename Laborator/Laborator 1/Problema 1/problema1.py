@@ -6,7 +6,7 @@ def save_matrix(fn,matrice):
     n=len(mat[0])
     for line in mat:
         if len(line)!=n:
-            print("eroare nu este matrice")
+            print("Eroare nu este matrice")
             return
     for line in mat:
         for x in line:
@@ -19,7 +19,7 @@ def load_matrix(matrice):
     n=len(mat[0])
     for line in mat:
         if len(line)!=n:
-            print("eroare inputul nu este o matrice")
+            print("Eroare input-ul nu este o matrice")
             return 0
     return mat
 

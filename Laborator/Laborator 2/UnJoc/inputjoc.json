@@ -1,0 +1,24 @@
+{
+  "states": [
+    "SecretRoom", "Kitchen", "Hallway", "Library", "Entrance", "Exit"
+  ],
+  "sigma": [
+    "0", "1", "2", "3"
+  ],
+  "routes": [
+    {"inc": "SecretRoom", "state": "1", "fin": "Hallway"},
+    {"inc": "Kitchen", "state": "2", "fin": "Hallway"},
+    {"inc": "Hallway", "state": "2", "fin": "Library"},
+    {"inc": "Hallway", "state": "3", "fin": "Kitchen"},
+    {"inc": "Library", "state": "1", "fin": "Exit"},
+    {"inc": "Library", "state": "3", "fin": "Hallway"},
+    {"inc": "Entrance", "state": "0", "fin": "Hallway"},
+    {"inc": "Exit", "state": "0", "fin": "Library"}
+  ],
+  "start": [
+    "Entrance"
+  ],
+  "final": [
+    "Exit"
+  ]
+}

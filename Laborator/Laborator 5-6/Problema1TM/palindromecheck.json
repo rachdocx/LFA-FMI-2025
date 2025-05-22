@@ -1,0 +1,46 @@
+{
+  "stari": [
+    "q_start",
+    "q_memorat_0_mergi_dr",
+    "q_memorat_1_mergi_dr",
+    "q_verifica_dr_pt_0",
+    "q_verifica_dr_pt_1",
+    "q_retur_st",
+    "q_accept",
+    "q_respinge"
+  ],
+  "alfabet_banda": ["0", "1", "_"],
+  "simbol_vid": "_",
+  "stare_initiala": "q_start",
+  "stari_finale": ["q_accept"],
+  "reguli": [
+    {"st_actuala": "q_start", "citit": "0", "st_urmatoare": "q_memorat_0_mergi_dr", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_start", "citit": "1", "st_urmatoare": "q_memorat_1_mergi_dr", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_start", "citit": "_", "st_urmatoare": "q_accept", "scris": "_", "mutare": "N"},
+
+    {"st_actuala": "q_memorat_0_mergi_dr", "citit": "0", "st_urmatoare": "q_memorat_0_mergi_dr", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_memorat_0_mergi_dr", "citit": "1", "st_urmatoare": "q_memorat_0_mergi_dr", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_memorat_0_mergi_dr", "citit": "_", "st_urmatoare": "q_verifica_dr_pt_0", "scris": "_", "mutare": "S"},
+
+    {"st_actuala": "q_memorat_1_mergi_dr", "citit": "0", "st_urmatoare": "q_memorat_1_mergi_dr", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_memorat_1_mergi_dr", "citit": "1", "st_urmatoare": "q_memorat_1_mergi_dr", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_memorat_1_mergi_dr", "citit": "_", "st_urmatoare": "q_verifica_dr_pt_1", "scris": "_", "mutare": "S"},
+
+    {"st_actuala": "q_verifica_dr_pt_0", "citit": "0", "st_urmatoare": "q_retur_st", "scris": "_", "mutare": "S"},
+    {"st_actuala": "q_verifica_dr_pt_0", "citit": "1", "st_urmatoare": "q_respinge", "scris": "1", "mutare": "N"},
+    {"st_actuala": "q_verifica_dr_pt_0", "citit": "_", "st_urmatoare": "q_accept", "scris": "_", "mutare": "N"},
+
+    {"st_actuala": "q_verifica_dr_pt_1", "citit": "1", "st_urmatoare": "q_retur_st", "scris": "_", "mutare": "S"},
+    {"st_actuala": "q_verifica_dr_pt_1", "citit": "0", "st_urmatoare": "q_respinge", "scris": "0", "mutare": "N"},
+    {"st_actuala": "q_verifica_dr_pt_1", "citit": "_", "st_urmatoare": "q_accept", "scris": "_", "mutare": "N"},
+
+    {"st_actuala": "q_retur_st", "citit": "0", "st_urmatoare": "q_retur_st", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_retur_st", "citit": "1", "st_urmatoare": "q_retur_st", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_retur_st", "citit": "_", "st_urmatoare": "q_start", "scris": "_", "mutare": "D"},
+
+    {"st_actuala": "q_accept", "citit": "_", "st_urmatoare": "q_accept", "scris": "_", "mutare": "N"},
+    {"st_actuala": "q_respinge", "citit": "0", "st_urmatoare": "q_respinge", "scris": "0", "mutare": "N"},
+    {"st_actuala": "q_respinge", "citit": "1", "st_urmatoare": "q_respinge", "scris": "1", "mutare": "N"},
+    {"st_actuala": "q_respinge", "citit": "_", "st_urmatoare": "q_respinge", "scris": "_", "mutare": "N"}
+  ]
+}

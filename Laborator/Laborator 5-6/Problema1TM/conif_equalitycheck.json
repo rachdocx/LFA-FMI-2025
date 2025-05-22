@@ -1,0 +1,62 @@
+{
+  "stari": [
+    "q_start",
+    "q_gasit0_N1", "q_gasit1_N1",
+    "q_cauta0_N2", "q_cauta1_N2",
+    "q_retur",
+    "q_verif_final",
+    "q_accept", "q_respinge"
+  ],
+  "alfabet_banda": ["0", "1", "$", "_", "x", "y"],
+  "simbol_vid": "_",
+  "stare_initiala": "q_start",
+  "stari_finale": ["q_accept"],
+  "reguli": [
+    {"st_actuala": "q_start", "citit": "0", "st_urmatoare": "q_gasit0_N1", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_start", "citit": "1", "st_urmatoare": "q_gasit1_N1", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_start", "citit": "x", "st_urmatoare": "q_start", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_start", "citit": "y", "st_urmatoare": "q_start", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_start", "citit": "$", "st_urmatoare": "q_verif_final", "scris": "$", "mutare": "D"},
+    {"st_actuala": "q_start", "citit": "_", "st_urmatoare": "q_respinge", "scris": "_", "mutare": "N"},
+
+    {"st_actuala": "q_gasit0_N1", "citit": "0", "st_urmatoare": "q_gasit0_N1", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_gasit0_N1", "citit": "1", "st_urmatoare": "q_gasit0_N1", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_gasit0_N1", "citit": "x", "st_urmatoare": "q_gasit0_N1", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_gasit0_N1", "citit": "y", "st_urmatoare": "q_gasit0_N1", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_gasit0_N1", "citit": "_", "st_urmatoare": "q_gasit0_N1", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_gasit0_N1", "citit": "$", "st_urmatoare": "q_cauta0_N2", "scris": "$", "mutare": "D"},
+
+    {"st_actuala": "q_gasit1_N1", "citit": "0", "st_urmatoare": "q_gasit1_N1", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_gasit1_N1", "citit": "1", "st_urmatoare": "q_gasit1_N1", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_gasit1_N1", "citit": "x", "st_urmatoare": "q_gasit1_N1", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_gasit1_N1", "citit": "y", "st_urmatoare": "q_gasit1_N1", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_gasit1_N1", "citit": "_", "st_urmatoare": "q_gasit1_N1", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_gasit1_N1", "citit": "$", "st_urmatoare": "q_cauta1_N2", "scris": "$", "mutare": "D"},
+
+    {"st_actuala": "q_cauta0_N2", "citit": "x", "st_urmatoare": "q_cauta0_N2", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_cauta0_N2", "citit": "y", "st_urmatoare": "q_cauta0_N2", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_cauta0_N2", "citit": "0", "st_urmatoare": "q_retur", "scris": "x", "mutare": "S"},
+    {"st_actuala": "q_cauta0_N2", "citit": "1", "st_urmatoare": "q_respinge", "scris": "1", "mutare": "N"},
+    {"st_actuala": "q_cauta0_N2", "citit": "_", "st_urmatoare": "q_respinge", "scris": "_", "mutare": "N"},
+
+    {"st_actuala": "q_cauta1_N2", "citit": "x", "st_urmatoare": "q_cauta1_N2", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_cauta1_N2", "citit": "y", "st_urmatoare": "q_cauta1_N2", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_cauta1_N2", "citit": "1", "st_urmatoare": "q_retur", "scris": "y", "mutare": "S"},
+    {"st_actuala": "q_cauta1_N2", "citit": "0", "st_urmatoare": "q_respinge", "scris": "0", "mutare": "N"},
+    {"st_actuala": "q_cauta1_N2", "citit": "_", "st_urmatoare": "q_respinge", "scris": "_", "mutare": "N"},
+
+    {"st_actuala": "q_retur", "citit": "0", "st_urmatoare": "q_retur", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_retur", "citit": "1", "st_urmatoare": "q_retur", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_retur", "citit": "x", "st_urmatoare": "q_retur", "scris": "x", "mutare": "S"},
+    {"st_actuala": "q_retur", "citit": "y", "st_urmatoare": "q_retur", "scris": "y", "mutare": "S"},
+    {"st_actuala": "q_retur", "citit": "$", "st_urmatoare": "q_retur", "scris": "$", "mutare": "S"},
+    {"st_actuala": "q_retur", "citit": "_", "st_urmatoare": "q_start", "scris": "_", "mutare": "D"},
+
+    {"st_actuala": "q_verif_final", "citit": "x", "st_urmatoare": "q_verif_final", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_verif_final", "citit": "y", "st_urmatoare": "q_verif_final", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_verif_final", "citit": "0", "st_urmatoare": "q_respinge", "scris": "0", "mutare": "N"},
+    {"st_actuala": "q_verif_final", "citit": "1", "st_urmatoare": "q_respinge", "scris": "1", "mutare": "N"},
+    {"st_actuala": "q_verif_final", "citit": "_", "st_urmatoare": "q_accept", "scris": "_", "mutare": "N"},
+    {"st_actuala": "q_verif_final", "citit": "$", "st_urmatoare": "q_respinge", "scris": "$", "mutare": "N"}
+  ]
+}

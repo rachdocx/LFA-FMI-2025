@@ -51,7 +51,9 @@ def ruleaza_mt(config_mt, sir_intrare, pasi_maxim=100):
 
 #nume_fisier_config = 'config_bitadder.json'
 #nume_fisier_config = 'config_copy.json'
-nume_fisier_config = 'config_2noadder.json'
+#nume_fisier_config = 'config_2noadder.json'
+#nume_fisier_config = 'conif_equalitycheck.json'
+nume_fisier_config = 'palindromecheck.json'
 fisier_citit = open(nume_fisier_config)
 mt_incarcat = json.load(fisier_citit)
 fisier_citit.close()

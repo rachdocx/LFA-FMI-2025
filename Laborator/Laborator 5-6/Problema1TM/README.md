@@ -1,7 +1,7 @@
-# 🧠 Turing Machine Simulator
+#  Turing Machine
 ---
 
-## 🔧 How it works
+## How it works
 
 The simulator reads a `.json` file which contains:
 - a list of **states** (`stari`)
@@ -19,7 +19,7 @@ Each transition rule specifies:
 
 ---
 
-## 📁 JSON Programs (Turing Machines)
+## JSON Programs (Turing Machines)
 
 ### `config_bitadder.json`
 

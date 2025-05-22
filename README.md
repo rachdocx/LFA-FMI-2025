@@ -12,8 +12,8 @@ This repository contains coursework, lab exercises, and research projects develo
 
 Contains solutions to weekly lab assignments. Each subdirectory corresponds to a specific lab session:
 
-- **Lab 1:** Introduction to regular expressions and basic automata .
-- **Lab 2:** Deterministic Finite game-like Automata (DFA) and Non-deterministic Finite Automata (NFA) implementations.
+- **Lab 1:** Input checking and basic automata .
+- **Lab 2:** Game-like Automata (DFA) and Non-deterministic Finite Automata (NFA).
 - **Lab 3:** PDA
 - **Lab 4:** 
 - **Lab 5-6:** Turing Machines.

@@ -1,0 +1,15 @@
+{
+  "stari": ["q_mergi_dr", "q_increm", "q_final"],
+  "alfabet_banda": ["0", "1", "_"],
+  "simbol_vid": "_",
+  "stare_initiala": "q_mergi_dr",
+  "stari_finale": ["q_final"],
+  "reguli": [
+    {"st_actuala": "q_mergi_dr", "citit": "0", "st_urmatoare": "q_mergi_dr", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_mergi_dr", "citit": "1", "st_urmatoare": "q_mergi_dr", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_mergi_dr", "citit": "_", "st_urmatoare": "q_increm", "scris": "_", "mutare": "S"},
+    {"st_actuala": "q_increm", "citit": "0", "st_urmatoare": "q_final", "scris": "1", "mutare": "N"},
+    {"st_actuala": "q_increm", "citit": "1", "st_urmatoare": "q_increm", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_increm", "citit": "_", "st_urmatoare": "q_final", "scris": "1", "mutare": "N"}
+  ]
+}

@@ -2,7 +2,7 @@
 
 **Limbaje Formale si Automate/Computing Theory**  
 
-This repository contains coursework, lab exercises, and research projects developed during the Formal Languages and Automata course at the University of Bucharest. It includes implementations in Python and C++, covering topics such as regular expressions, finite automata, grammars, and Turing machines.
+This repository contains coursework, lab exercises, and research projects developed during the Computing Theory course. It includes implementations in Python and C++, covering topics such as regular expressions, finite automata, grammars, and Turing machines.
 
 ---
 

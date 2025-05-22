@@ -1,12 +1,12 @@
 # LFA-FMI-2025
 
-📘 **Limbaje Formale si Automate/Computing Theory**  
+**Limbaje Formale si Automate/Computing Theory**  
 
 This repository contains coursework, lab exercises, and research projects developed during the Formal Languages and Automata course at the University of Bucharest. It includes implementations in Python and C++, covering topics such as regular expressions, finite automata, grammars, and Turing machines.
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ### `Laborator/`
 
@@ -20,7 +20,7 @@ Contains solutions to weekly lab assignments. Each subdirectory corresponds to a
 
 ---
 
-## 🔬 Projects
+## Projects
 
 ### 1. Kolakoski Sequence
 
@@ -40,7 +40,7 @@ Investigates powers of 2 that consist solely of even digits in their decimal rep
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **Python:** For scripting, data analysis, and prototyping algorithms.
 - **C++:** For performance-critical implementations and simulations.

@@ -1,5 +1,4 @@
 import json
-#de inteles si rezolvat chestia astsa
 def epsilon_closure(nfa, states):
     closure = set(states)
     changed = True

@@ -1,0 +1,91 @@
+{
+  "stari": [
+    "q_scan_sursa",
+    "q_mergi_0",
+    "q_mergi_1",
+    "q_scrie_0",
+    "q_scrie_1",
+    "q_retur_h",
+    "q_retur_d",
+    "q_retur_m",
+    "q_curat_init",
+    "q_curat",
+    "q_final"
+  ],
+  "alfabet_banda": ["0", "1", "$", "#", "_", "x", "y"],
+  "simbol_vid": "_",
+  "stare_initiala": "q_scan_sursa",
+  "stari_finale": ["q_final"],
+  "reguli": [
+    {"st_actuala": "q_scan_sursa", "citit": "0", "st_urmatoare": "q_mergi_0", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_scan_sursa", "citit": "1", "st_urmatoare": "q_mergi_1", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_scan_sursa", "citit": "x", "st_urmatoare": "q_scan_sursa", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_scan_sursa", "citit": "y", "st_urmatoare": "q_scan_sursa", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_scan_sursa", "citit": "$", "st_urmatoare": "q_curat_init", "scris": "$", "mutare": "S"},
+    {"st_actuala": "q_scan_sursa", "citit": "_", "st_urmatoare": "q_final", "scris": "_", "mutare": "N"},
+
+    {"st_actuala": "q_mergi_0", "citit": "0", "st_urmatoare": "q_mergi_0", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_mergi_0", "citit": "1", "st_urmatoare": "q_mergi_0", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_mergi_0", "citit": "x", "st_urmatoare": "q_mergi_0", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_mergi_0", "citit": "y", "st_urmatoare": "q_mergi_0", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_mergi_0", "citit": "$", "st_urmatoare": "q_mergi_0", "scris": "$", "mutare": "D"},
+    {"st_actuala": "q_mergi_0", "citit": "_", "st_urmatoare": "q_mergi_0", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_mergi_0", "citit": "#", "st_urmatoare": "q_scrie_0", "scris": "#", "mutare": "D"},
+
+    {"st_actuala": "q_mergi_1", "citit": "0", "st_urmatoare": "q_mergi_1", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_mergi_1", "citit": "1", "st_urmatoare": "q_mergi_1", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_mergi_1", "citit": "x", "st_urmatoare": "q_mergi_1", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_mergi_1", "citit": "y", "st_urmatoare": "q_mergi_1", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_mergi_1", "citit": "$", "st_urmatoare": "q_mergi_1", "scris": "$", "mutare": "D"},
+    {"st_actuala": "q_mergi_1", "citit": "_", "st_urmatoare": "q_mergi_1", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_mergi_1", "citit": "#", "st_urmatoare": "q_scrie_1", "scris": "#", "mutare": "D"},
+
+    {"st_actuala": "q_scrie_0", "citit": "0", "st_urmatoare": "q_scrie_0", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_scrie_0", "citit": "1", "st_urmatoare": "q_scrie_0", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_scrie_0", "citit": "_", "st_urmatoare": "q_retur_h", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_scrie_0", "citit": "#", "st_urmatoare": "q_final", "scris": "#", "mutare": "N"},
+
+    {"st_actuala": "q_scrie_1", "citit": "0", "st_urmatoare": "q_scrie_1", "scris": "0", "mutare": "D"},
+    {"st_actuala": "q_scrie_1", "citit": "1", "st_urmatoare": "q_scrie_1", "scris": "1", "mutare": "D"},
+    {"st_actuala": "q_scrie_1", "citit": "_", "st_urmatoare": "q_retur_h", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_scrie_1", "citit": "#", "st_urmatoare": "q_final", "scris": "#", "mutare": "N"},
+
+    {"st_actuala": "q_retur_h", "citit": "0", "st_urmatoare": "q_retur_h", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_retur_h", "citit": "1", "st_urmatoare": "q_retur_h", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_retur_h", "citit": "_", "st_urmatoare": "q_retur_h", "scris": "_", "mutare": "S"},
+    {"st_actuala": "q_retur_h", "citit": "x", "st_urmatoare": "q_retur_h", "scris": "x", "mutare": "S"},
+    {"st_actuala": "q_retur_h", "citit": "y", "st_urmatoare": "q_retur_h", "scris": "y", "mutare": "S"},
+    {"st_actuala": "q_retur_h", "citit": "#", "st_urmatoare": "q_retur_d", "scris": "#", "mutare": "S"},
+
+    {"st_actuala": "q_retur_d", "citit": "0", "st_urmatoare": "q_retur_d", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_retur_d", "citit": "1", "st_urmatoare": "q_retur_d", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_retur_d", "citit": "x", "st_urmatoare": "q_retur_d", "scris": "x", "mutare": "S"},
+    {"st_actuala": "q_retur_d", "citit": "y", "st_urmatoare": "q_retur_d", "scris": "y", "mutare": "S"},
+    {"st_actuala": "q_retur_d", "citit": "_", "st_urmatoare": "q_retur_d", "scris": "_", "mutare": "S"},
+    {"st_actuala": "q_retur_d", "citit": "#", "st_urmatoare": "q_retur_d", "scris": "#", "mutare": "S"},
+    {"st_actuala": "q_retur_d", "citit": "$", "st_urmatoare": "q_retur_m", "scris": "$", "mutare": "S"},
+
+    {"st_actuala": "q_retur_m", "citit": "0", "st_urmatoare": "q_retur_m", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_retur_m", "citit": "1", "st_urmatoare": "q_retur_m", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_retur_m", "citit": "x", "st_urmatoare": "q_scan_sursa", "scris": "x", "mutare": "D"},
+    {"st_actuala": "q_retur_m", "citit": "y", "st_urmatoare": "q_scan_sursa", "scris": "y", "mutare": "D"},
+    {"st_actuala": "q_retur_m", "citit": "_", "st_urmatoare": "q_scan_sursa", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_retur_m", "citit": "$", "st_urmatoare": "q_retur_m", "scris": "$", "mutare": "S"},
+
+    {"st_actuala": "q_curat_init", "citit": "0", "st_urmatoare": "q_curat_init", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_curat_init", "citit": "1", "st_urmatoare": "q_curat_init", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_curat_init", "citit": "x", "st_urmatoare": "q_curat", "scris": "x", "mutare": "S"},
+    {"st_actuala": "q_curat_init", "citit": "y", "st_urmatoare": "q_curat", "scris": "y", "mutare": "S"},
+    {"st_actuala": "q_curat_init", "citit": "_", "st_urmatoare": "q_final", "scris": "_", "mutare": "N"},
+    {"st_actuala": "q_curat_init", "citit": "$", "st_urmatoare": "q_curat_init", "scris": "$", "mutare": "S"},
+
+    {"st_actuala": "q_curat", "citit": "x", "st_urmatoare": "q_curat", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_curat", "citit": "y", "st_urmatoare": "q_curat", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_curat", "citit": "_", "st_urmatoare": "q_final", "scris": "_", "mutare": "D"},
+    {"st_actuala": "q_curat", "citit": "0", "st_urmatoare": "q_curat", "scris": "0", "mutare": "S"},
+    {"st_actuala": "q_curat", "citit": "1", "st_urmatoare": "q_curat", "scris": "1", "mutare": "S"},
+    {"st_actuala": "q_curat", "citit": "$", "st_urmatoare": "q_curat", "scris": "$", "mutare": "S"},
+
+    {"st_actuala": "q_final", "citit": "_", "st_urmatoare": "q_final", "scris": "_", "mutare": "N"}
+  ]
+}

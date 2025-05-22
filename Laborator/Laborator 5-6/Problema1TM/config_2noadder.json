@@ -1,0 +1,46 @@
+{
+  "stari": [
+    "start_citeste_b1",
+    "b1_este_0_mergi_la_b2",
+    "b1_este_1_mergi_la_b2",
+    "b2_ptr_0plus0",
+    "b2_ptr_0plus1",
+    "b2_ptr_1plus0",
+    "b2_ptr_1plus1",
+    "pune_egal_rez_0",
+    "pune_egal_rez_1",
+    "pune_egal_rez_10",
+    "scrie_rez_0",
+    "scrie_rez_1",
+    "scrie_rez_10_p1",
+    "scrie_rez_10_p2",
+    "stop_final"
+  ],
+  "alfabet_banda": ["0", "1", "+", "_", "="],
+  "simbol_vid": "_",
+  "stare_initiala": "start_citeste_b1",
+  "stari_finale": ["stop_final"],
+  "reguli": [
+    {"st_actuala": "start_citeste_b1", "citit": "0", "st_urmatoare": "b1_este_0_mergi_la_b2", "scris": "0", "mutare": "D"},
+    {"st_actuala": "start_citeste_b1", "citit": "1", "st_urmatoare": "b1_este_1_mergi_la_b2", "scris": "1", "mutare": "D"},
+
+    {"st_actuala": "b1_este_0_mergi_la_b2", "citit": "+", "st_urmatoare": "b2_ptr_0plus0", "scris": "+", "mutare": "D"},
+    {"st_actuala": "b1_este_1_mergi_la_b2", "citit": "+", "st_urmatoare": "b2_ptr_1plus0", "scris": "+", "mutare": "D"},
+
+    {"st_actuala": "b2_ptr_0plus0", "citit": "0", "st_urmatoare": "pune_egal_rez_0", "scris": "0", "mutare": "D"},
+    {"st_actuala": "b2_ptr_0plus0", "citit": "1", "st_urmatoare": "pune_egal_rez_1", "scris": "1", "mutare": "D"},
+
+    {"st_actuala": "b2_ptr_1plus0", "citit": "0", "st_urmatoare": "pune_egal_rez_1", "scris": "0", "mutare": "D"},
+    {"st_actuala": "b2_ptr_1plus0", "citit": "1", "st_urmatoare": "pune_egal_rez_10", "scris": "1", "mutare": "D"},
+
+    {"st_actuala": "pune_egal_rez_0", "citit": "_", "st_urmatoare": "scrie_rez_0", "scris": "=", "mutare": "D"},
+    {"st_actuala": "pune_egal_rez_1", "citit": "_", "st_urmatoare": "scrie_rez_1", "scris": "=", "mutare": "D"},
+    {"st_actuala": "pune_egal_rez_10", "citit": "_", "st_urmatoare": "scrie_rez_10_p1", "scris": "=", "mutare": "D"},
+
+    {"st_actuala": "scrie_rez_0", "citit": "_", "st_urmatoare": "stop_final", "scris": "0", "mutare": "N"},
+    {"st_actuala": "scrie_rez_1", "citit": "_", "st_urmatoare": "stop_final", "scris": "1", "mutare": "N"},
+
+    {"st_actuala": "scrie_rez_10_p1", "citit": "_", "st_urmatoare": "scrie_rez_10_p2", "scris": "1", "mutare": "D"},
+    {"st_actuala": "scrie_rez_10_p2", "citit": "_", "st_urmatoare": "stop_final", "scris": "0", "mutare": "N"}
+  ]
+}
